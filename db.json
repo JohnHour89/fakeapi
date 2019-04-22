@@ -1,14 +1,268 @@
+[
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "Admin",
+        "permissions": [
+            [
+                "add_file",
+                "file_apps",
+                "file"
+            ],
+            [
+                "change_file",
+                "file_apps",
+                "file"
+            ],
+            [
+                "view_file",
+                "file_apps",
+                "file"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$NZGNz4aJDJlO$YGltyzFQCBZbBuh5k9eClK7y7bSR5IPJB79kyxJiwNw=",
+        "last_login": "2019-04-22T03:28:17.216Z",
+        "is_superuser": true,
+        "username": "tssb",
+        "first_name": "",
+        "last_name": "",
+        "email": "thtan@tssb.com.my",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-03-29T02:26:00.677Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$m0P6B3Dgzo40$rfedM4I9tu8Q+nvdsKEyfEcNIURuwQn4E6xwZly730k=",
+        "last_login": "2019-04-11T01:05:44.995Z",
+        "is_superuser": false,
+        "username": "thtan",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-03-29T02:27:09Z",
+        "groups": [
+            [
+                "Admin"
+            ]
+        ],
+        "user_permissions": [
+            [
+                "add_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "change_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "delete_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "view_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "add_group",
+                "auth",
+                "group"
+            ],
+            [
+                "change_group",
+                "auth",
+                "group"
+            ],
+            [
+                "delete_group",
+                "auth",
+                "group"
+            ],
+            [
+                "view_group",
+                "auth",
+                "group"
+            ],
+            [
+                "add_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "change_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "delete_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "view_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "add_user",
+                "auth",
+                "user"
+            ],
+            [
+                "change_user",
+                "auth",
+                "user"
+            ],
+            [
+                "delete_user",
+                "auth",
+                "user"
+            ],
+            [
+                "view_user",
+                "auth",
+                "user"
+            ],
+            [
+                "add_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "change_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "delete_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "view_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "add_file",
+                "file_apps",
+                "file"
+            ],
+            [
+                "change_file",
+                "file_apps",
+                "file"
+            ],
+            [
+                "delete_file",
+                "file_apps",
+                "file"
+            ],
+            [
+                "view_file",
+                "file_apps",
+                "file"
+            ],
+            [
+                "add_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "change_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "delete_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_session",
+                "sessions",
+                "session"
+            ]
+        ]
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "6hloaxal1gcnhz9w87d8gqiwd359lbp3",
+    "fields": {
+        "session_data": "ZGE4MDg4MTVlZTQxNWNjZTgwNWUwMmQ4OTY0ZjdkYmJjMDBkZjA2Yzp7Im51bV92aXNpdHMiOjF9",
+        "expire_date": "2019-04-17T03:24:57.663Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "8q4h4stmvdfetu1wj8nlxbej64z4ysva",
+    "fields": {
+        "session_data": "ZmIzYWU3Yzc0YjE2ZGZiMWZjZWVkNGQ3YzU1NTE2ZTJhYTRhMTk1Njp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyMWRhOGQ0ZDc2ZjIzOTMwNjBhM2FmZjExMTJiZWIzMDkyZWViMmRjIn0=",
+        "expire_date": "2019-04-10T02:59:19.805Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "abclr96p4fdrgl6b3olar6oq8ryn8bpi",
+    "fields": {
+        "session_data": "YWZlMDEzZTZkMzU5NTA4MzVhN2I1ZjhjNDdkMTJiZjgwNDZkZjI3Yjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIxYzA0ZTAxZDlmYmM1MDIyMzFmMmJhNTYwMWRmNjE1YjRlNTE4Zjk5In0=",
+        "expire_date": "2019-04-19T02:59:57.954Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "hafs333lvb3ycpbecpq1sgbgnhc50341",
+    "fields": {
+        "session_data": "ZmIzYWU3Yzc0YjE2ZGZiMWZjZWVkNGQ3YzU1NTE2ZTJhYTRhMTk1Njp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyMWRhOGQ0ZDc2ZjIzOTMwNjBhM2FmZjExMTJiZWIzMDkyZWViMmRjIn0=",
+        "expire_date": "2019-04-09T07:09:00.363Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "j5rrbnlge3q488hrv8rdqbhz5mshty1i",
+    "fields": {
+        "session_data": "YWZlMDEzZTZkMzU5NTA4MzVhN2I1ZjhjNDdkMTJiZjgwNDZkZjI3Yjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIxYzA0ZTAxZDlmYmM1MDIyMzFmMmJhNTYwMWRmNjE1YjRlNTE4Zjk5In0=",
+        "expire_date": "2019-05-06T03:28:17.218Z"
+    }
+},
+{
+    "model": "file_apps.file",
+    "pk": 637,
+    "fields": {
+        "file": "INVT1188W.pdf",
+        "doc_type": "INVOICE TO CUSTOMER",
+        "sender": "TSSB SDN BHD",
+        "receiver": "Envictus Central Food Services Sdn Bhd",
+        "tax": "15.00",
+        "amount": "250.00",
+        "total": "265.00",
+        "pdfdata": "Goods received in good condition265.0015.00250.00SUB TOTAL (RM)GST6%(RM)TOTAL (RM)TSSB SDN BHDBank: RHB Bank BertwdAccount Number: 21232110005060E. & O.E.250.00250.00** PLS CHOP, SIGN & RETURN 2 COPIES1RM: Two Hundred And Sixty Five OnlyNote:1. Price is subject to change without prior notice1Year..Domain name hosting & registration feewww.envictuscentraifood.comPeriod covered: 12/02/2018-11/02/2019(QUANTITY (UNIT PRICE I AMOUNT \\IITEM IDESCRIPTIONT118821/02/2018SO18-072Tech-KWCOD1INV/DO NODATEPO/REF#CLASSTERMSPAGEEnvictus Central Food Services Sdn BlNo. 12,Jalan51/203A,Kawasan Perindustrian Tiong Nam, Seks^en 51,46050 Petaling JayaTel:Attn: Accounts DepartmentGST REG. NO.: 000659030016Sold ToTAX INVOICE & DELIVERY ORDERPartners In SecuredCommunicationsTSSB SDN B -ID (444390K)35-1,JalanTarljungSD13/2,Bandar Sri (famansara,52200 Kuala Lumpur.Tel: 603-6276 7910 Fax:603-6276 0912",
+        "metadata": "{'/Creator': 'Presto! PageManager 9', '/CreationDate': \"D:20180222162145+08'00'\", '/Producer': 'PDFlib 9.0.1 (C++ legacy/Win32)'}",
+        "keywords": "['Goods', 'received', 'good', 'condition265.0015.00250.00SUB', 'TOTAL', 'RM', 'GST6', '%', 'RM', 'TOTAL', 'RM', 'TSSB', 'SDN', 'BHDBank', 'RHB', 'Bank', 'BertwdAccount', 'Number', '21232110005060E', '.', '&', 'O.E.250.00250.00**', 'PLS', 'CHOP', 'SIGN', '&', 'RETURN', '2', 'COPIES1RM', 'Two', 'Hundred', 'And', 'Sixty', 'Five', 'OnlyNote:1', '.', 'Price', 'subject', 'change', 'without', 'prior', 'notice1Year..Domain', 'name', 'hosting', '&', 'registration', 'feewww.envictuscentraifood.comPeriod', 'covered', '12/02/2018-11/02/2019', 'QUANTITY', 'UNIT', 'PRICE', 'I', 'AMOUNT', '\\\\IITEM', 'IDESCRIPTIONT118821/02/2018SO18-072Tech-KWCOD1INV/DO', 'NODATEPO/REF', '#', 'CLASSTERMSPAGEEnvictus', 'Central', 'Food', 'Services', 'Sdn', 'BlNo', '.', '12', 'Jalan51/203A', 'Kawasan', 'Perindustrian', 'Tiong', 'Nam', 'Seks^en', '51,46050', 'Petaling', 'JayaTel', 'Attn', 'Accounts', 'DepartmentGST', 'REG', '.', 'NO', '.', '000659030016Sold', 'ToTAX', 'INVOICE', '&', 'DELIVERY', 'ORDERPartners', 'In', 'SecuredCommunicationsTSSB', 'SDN', 'B', '-ID', '444390K', '35-1', 'JalanTarljungSD13/2', 'Bandar', 'Sri', 'famansara,52200', 'Kuala', 'Lumpur.Tel', '603-6276', '7910', 'Fax:603-6276', '0912']",
+        "remark": "INVT1188(W).pdf",
+        "created_by": "/Users/tssb/scanner/admininstrator/INVT1188(W).pdf",
+        "created_date": "2019-03-27T16:38:38Z",
+        "updated_date": "2019-03-27T14:01:34Z",
+        "timestamp": "2019-04-22T02:31:12.370Z"
+    }
 }
+]
